@@ -12,10 +12,10 @@ DONE* Genre
 
 Provide the following functionality:
 
-* List all Books
-* Show an individual Book
-* Add a new Book to the Library.
-* Remove a Book from the Library
+DONE* List all Books
+DONE* Show an individual Book
+DONE* Add a new Book to the Library.
+DONE* Remove a Book from the Library
  
  Draw a diagram showing what happens when a user sends a GET request to `/books`. Where does the request go and how does the server process the request? What files are doing what?
  

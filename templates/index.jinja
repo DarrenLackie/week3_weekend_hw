@@ -4,11 +4,27 @@
     </head>
     <body>
         <ul>
+        <form class="form-inline" action="/books" method="post">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title">
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author">
+        <label for="genre">Genre</label>
+        <input type="text" name="genre" id="genre">
+        <input type="submit" value="Add book"> 
+        </form>
+
         {% for book in books %}
         <li>
         <h2>Title: {{ book.title }}</h2>
         <h3>Author: {{ book.author }}</h3>
         <h4>Genre: {{ book.genre }}</h4>
+        <a href="/books/{{books.index(book)}}">Show Details</a>
+
+        <form class="form-inline" action="/books/delete/{{ book.title }}" method="POST">
+            <input type="submit" value="Delete">
+        </form>
+        <hr>
         {% endfor %}
         </li>
         </ul>
