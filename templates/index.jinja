@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title> {{ title }} </title>
-    </head>
-    <body>
+{% extends "base.jinja"%}
+
+{% block content %}
         <ul>
         <form class="form-inline" action="/books" method="post">
         <label for="title">Title</label>
@@ -11,14 +9,21 @@
         <input type="text" name="author" id="author">
         <label for="genre">Genre</label>
         <input type="text" name="genre" id="genre">
+        <label for="checked_out">Checked out?</label>
+        <input type="checkbox" name="checked_out" id="checked_out">
         <input type="submit" value="Add book"> 
         </form>
-
+        <div class="book-container">
         {% for book in books %}
         <li>
         <h2>Title: {{ book.title }}</h2>
         <h3>Author: {{ book.author }}</h3>
         <h4>Genre: {{ book.genre }}</h4>
+        {% if book.checked_out %}
+          <p><i>Unavailable</i></p>
+          {% else %}
+            <p><i>Available</i></p>
+          {% endif %}
         <a href="/books/{{books.index(book)}}">Show Details</a>
 
         <form class="form-inline" action="/books/delete/{{ book.title }}" method="POST">
@@ -28,5 +33,4 @@
         {% endfor %}
         </li>
         </ul>
-    </body>
-</html>
+    {% endblock %}

@@ -21,10 +21,10 @@ DONE* Remove a Book from the Library
  
 ## Extensions
 
-* Add a `checked_out` boolean property to the `Book` class.
-* When displaying a book, display whether it is checked in or checked out.
+DONE* Add a `checked_out` boolean property to the `Book` class.
+DONE* When displaying a book, display whether it is checked in or checked out.
 * Add some styling using CSS.
-* Add a navigation bar that is shared between all templates
+DONE* Add a navigation bar that is shared between all templates
 
 ## Advanced Extensions
 
