@@ -6,9 +6,9 @@ Your task is to model a Flask app which will list books in a Library.
 
 Your application should have a single class - Book - and should contain the following properties:
 
-* Title
-* Author
-* Genre
+DONE* Title
+DONE* Author
+DONE* Genre
 
 Provide the following functionality:
 
