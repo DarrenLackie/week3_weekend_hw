@@ -4,33 +4,34 @@
         <ul>
         <form class="form-inline" action="/books" method="post">
         <label for="title">Title</label>
-        <input type="text" name="title" id="title">
+        <input type="text" name="title" id="title" required>
         <label for="author">Author</label>
-        <input type="text" name="author" id="author">
+        <input type="text" name="author" id="author" required>
         <label for="genre">Genre</label>
-        <input type="text" name="genre" id="genre">
+        <input type="text" name="genre" id="genre" required>
         <label for="checked_out">Checked out?</label>
         <input type="checkbox" name="checked_out" id="checked_out">
         <input type="submit" value="Add book"> 
         </form>
         <div class="book-container">
-        {% for book in books %}
-        <li>
-        <h2>Title: {{ book.title }}</h2>
-        <h3>Author: {{ book.author }}</h3>
-        <h4>Genre: {{ book.genre }}</h4>
-        {% if book.checked_out %}
-          <p><i>Unavailable</i></p>
-          {% else %}
-            <p><i>Available</i></p>
-          {% endif %}
-        <a href="/books/{{books.index(book)}}">Show Details</a>
+          {% for book in books %}
+          <div class="book">
+            <h2>Title: {{ book.title }}</h2>
+            <h3>Author: {{ book.author }}</h3>
+            <h4>Genre: {{ book.genre }}</h4>
 
-        <form class="form-inline" action="/books/delete/{{ book.title }}" method="POST">
+            {% if book.checked_out %}
+              <p><i>Unavailable</i></p>
+              {% else %}
+                <p><i>Available</i></p>
+            {% endif %}
+
+            <a href="/books/{{books.index(book)}}">Show Details</a>
+            <br>
+            <form class="form" action="/books/delete/{{ book.title }}" method="POST">
             <input type="submit" value="Delete">
-        </form>
-        <hr>
-        {% endfor %}
-        </li>
-        </ul>
+            </form>
+          </div>
+          {% endfor %}
+        </div>
     {% endblock %}
