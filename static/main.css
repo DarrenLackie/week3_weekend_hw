@@ -1,24 +1,13 @@
 body {
     background-color:rgba(0, 139, 139, 0.276);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 header {
     background-color: #1445b8bd;
 }
 
-/* .navLink li {
-    margin: 20px 10px;
-} */
-
-a {
-    color:black;
-  }
-
-.navLink > a {
-    color:white;
-}  
-
-.navLink {
+.navbar {
     display: inline;
 }
 
@@ -57,7 +46,7 @@ a {
 .book {
     display: flex;
     flex-direction: column;
-    width: 20vw;
+    width: 25vw;
     background-color: #b7b7b7b1;
     padding: 10px;
     margin: 20px;
@@ -65,10 +54,56 @@ a {
     /* text-align: center; */
   }
 
+.individual_book {
+    width: 30vw;
+    background-color: #b7b7b7b1;
+    padding: 10px;
+    margin: 20px;
+    border: solid 2px black;
+    text-align: center;
+}
+
 .form input[type=submit]:hover {
     background-color: #eb1414;
   }
 
 .form-inline input[type="submit"]:hover {
     background-color: green;
+}
+
+header > nav > ul {
+    list-style: none;
+    font-size: 18px;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.navbar > a {
+    color:white;
+} 
+
+.contact_box {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    background-color: #b7b7b7b1;
+    /* padding: 10px; */
+    margin: 20px;
+    border: solid 2px black;
+    text-align: center;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    background-color: #b7b7b7b1;
+    padding: 20px;
+    margin: 25px;
+    margin-left: 375px;
+    border: solid 2px black;
+    font-size: 18px;
+    text-align: center;
 }

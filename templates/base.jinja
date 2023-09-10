@@ -1,15 +1,25 @@
 <html>
     <head>
       <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-      <title>{{ title }} - Darren's Library</title>
+      <title>Darren's Library</title>
     </head>
-    <header>
-        <ul>
-          <li class="navLink"><a href="/books">Home</a></li>
-        </ul>
-        <hr>
-    </header>
     <body>
-        {% block content %}{% endblock %}
+      <header>
+        <nav>
+          <ul>
+            <li class="navbar">
+                <a href="/books">Home</a>
+            </li>
+            <li class="navbar">
+                <a href="/books/contact">Contact</a>
+            </li>
+            <li class="navbar">
+                <a href="/books/about">About</a>
+            </li>
+          </ul>
+          <hr>
+        </nav>
+      </header>
+    {% block content %}{% endblock %}
     </body>
 </html>
