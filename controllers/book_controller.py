@@ -16,6 +16,10 @@ def contact():
 def about():
    return render_template("about.jinja", title="About", books=books)
 
+@books_blueprint.route('/books/search')
+def search():
+   return render_template('search.jinja', title="Not a real search", books=books)
+
 @books_blueprint.route('/books/<index>')
 def show(index):
   chosen_book = books[int(index)]

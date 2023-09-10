@@ -7,6 +7,12 @@
                 <h1> {{book.title}} </h1>
                 <h2> {{ book.author }} </h2>
                 <h3> {{ book.genre }} </h3>
+
+            {% if book.checked_out %}
+                <p><i>Unavailable &#10060</i></p>
+            {% else %}
+                <p><i>Available &#9989</i></p>
+            {% endif %}
             </div>
         </div>
 {% endblock %}

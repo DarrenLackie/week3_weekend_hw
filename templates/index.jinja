@@ -29,10 +29,18 @@
             <h3>Author: {{ book.author }}</h3>
             <h4>Genre: {{ book.genre }}</h4>
 
+            <fieldset>
+              <legend>Book status</legend>
+                <input type="radio" id="checked-in" name="in-or-out - {{ book.title }}" value="checked-in"/>
+                <label for="checked-in">Check-in</label>
+                <input type="radio" id="checked-out" name="in-or-out - {{ book.title }}" value="checked-out"/>
+                <label for="checked-out">Check-Out</label>
+            </fieldset>
+
             {% if book.checked_out %}
-              <p><i>Unavailable</i></p>
+              <p><i>Unavailable &#10060</i></p>
               {% else %}
-                <p><i>Available</i></p>
+                <p><i>Available &#9989</i></p>
             {% endif %}
 
             <a href="/books/{{books.index(book)}}">Show Details</a>

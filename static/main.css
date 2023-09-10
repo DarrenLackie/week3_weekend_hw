@@ -19,6 +19,8 @@ header {
 
 .form-inline label {
     margin: 5px 10px 5px 10px;
+    padding: 10px;
+    padding-left: 65px
   }
 
 .form-inline input[type="submit"] {
@@ -28,6 +30,10 @@ header {
     color: white;
     margin-left:10px;
   }
+
+.form-inline input[type="text"] {
+    width: 18%
+}
 
 .form [type="submit"] {
     padding: 5px 10px;
