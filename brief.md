@@ -28,7 +28,7 @@ DONE* Add a navigation bar that is shared between all templates
 
 ## Advanced Extensions
 
-* Give the user the ability to update whether a book is checked in or out. 
+DONE* Give the user the ability to update whether a book is checked in or out. 
     * Because we can't use the `PUT` HTTP method you will need to use a form to send a `POST` route to `/books/<index>`. This form should use a checkbox or radio buttons to update the checked out status.
 * Create a route that displays books of a certain genre using the route`/books/genre/<genre>`.
 * Anything else you can think of.

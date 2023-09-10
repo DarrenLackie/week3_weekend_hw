@@ -25,6 +25,11 @@ def show(index):
   chosen_book = books[int(index)]
   return render_template('books.jinja', book=chosen_book)
 
+# @books_blueprint.route('/books/genre/<genre>')
+# def genre(genre):
+#    chosen_genre = request.form['genre']
+#    return render_template('', genre=chosen_genre)
+
 @books_blueprint.route('/books', methods=["POST"])
 def add_book():
    title = request.form['title']
