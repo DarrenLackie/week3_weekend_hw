@@ -11,16 +11,25 @@ header {
     display: inline;
 }
 
+main > ul {
+    padding:10px;
+}
+
 .form-inline {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
+    background-color: rgba(128, 128, 128, 0.442);
+    margin-right: 20px;
+    margin-left: 20px;
+    border: 1px solid black;
   }
 
 .form-inline label {
     margin: 5px 10px 5px 10px;
     padding: 10px;
-    padding-left: 65px
+    padding: 5px;
   }
 
 .form-inline input[type="submit"] {
@@ -52,7 +61,7 @@ header {
 .book {
     display: flex;
     flex-direction: column;
-    width: 25vw;
+    width: 26vw;
     background-color: #b7b7b7b1;
     padding: 10px;
     margin: 20px;
